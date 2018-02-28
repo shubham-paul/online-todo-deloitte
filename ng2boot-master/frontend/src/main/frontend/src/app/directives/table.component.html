@@ -1,0 +1,53 @@
+<div class="container container-fluid">
+  <div class="row" *ngIf="showFilter === true && isLoaded === true">
+    <div class="form-group">
+      <label *ngIf="enableFilter === true">Filter </label>
+      <input type="text" id="inputName" *ngIf="enableFilter === true" [(ngModel)]="searchText"/>
+      <button type="button" class="btn btn-default btn-sm" *ngIf="enableFilter === true"
+            [disabled]="searchText == undefined || searchText.length == 0"  (click)="applyFilter()">
+        <span class="glyphicon glyphicon-ok"></span>
+      </button>
+      <button type="button" class="btn btn-default btn-sm" *ngIf="enableFilter === true"
+              [disabled]="searchText == undefined || searchText.length == 0" (click)="clearFilter()">
+        <span class="glyphicon glyphicon-remove"></span>
+      </button>
+      <a class="btn btn-default btn-sm pull-right" *ngIf="enableAddNavigation === true" (click)="navigateToCreate()">
+        <span class="glyphicon glyphicon-plus-sign"></span>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <table class="table table-responsive table-hover">
+      <thead class="thead-inverse">
+      <tr>
+        <th *ngFor="let column of columns">{{column.header}}</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let row of rows;">
+        <td *ngFor="let column of columns">{{row[column.field]}}
+        </td>
+        <td *ngIf="enableEditNavigation === true">
+          <span class="glyphicon glyphicon-edit editButton" (click)="navigateToEdit(row)"></span>
+        </td>
+        <td *ngIf="enableDelete === true">
+          <span class="glyphicon glyphicon-trash editButton" (click)="delete(row)"></span>
+        </td>
+        <td *ngIf="row.taskStatus ===true">
+          <span class="glyphicon glyphicon glyphicon-check" (click)="complete(row)"></span>
+        </td>
+        <td *ngIf="row.taskStatus ===false">
+          <span class="glyphicon glyphicon glyphicon-check text-muted" (click)="complete(row)"></span>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-lg-offset-5 col-md-offset-5 col-sm-offset-5" *ngIf="isLoaded == false">
+    <img src="../../assets/gif/mi-loader.gif"
+         name="Table Loader">
+  </div>
+  <div class="row col-lg-offset-5" *ngIf="isLoaded == true">
+    <ngbd-pagination-basic > component</ngbd-pagination-basic>
+  </div>
+</div>

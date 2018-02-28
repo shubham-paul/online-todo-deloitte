@@ -1,0 +1,10 @@
+<ngb-pagination [(collectionSize)]="totalItems"
+                [(pageSize)]="itemsPerPage"
+                [disabled]="isDisabled"
+                [(page)]="page"
+                [maxSize]="maxSize"
+                [rotate]="true"
+                [boundaryLinks]="boundaryLinks"
+                (pageChange)="loadPage($event)"
+                [ellipses]="true"
+                aria-label="Default pagination"></ngb-pagination>

@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('assets/fonts/glyphicons-halflings-regular.eot');
+  src: url('assets/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('assets/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('assets/fonts/glyphicons-halflings-regular.woff') format('woff'), url('assets/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('assets/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+@font-face {
+  font-family: "Geogrotesque-Regular";
+  src: url('assets/fonts/Geogrotesque-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Geogrotesque-Bold";
+  src: url('assets/fonts/Geogrotesque-Bold.ttf');
+}
+
+@font-face {
+  font-family: "Geogrotesque-SemiBold";
+  src: url('assets/fonts/Geogrotesque-SemiBold.ttf');
+}
+
+html {
+  height: 100%;
+}
+
+body {
+
+}
+
+.ng-valid[required], .ng-valid.required {
+  border-left: 5px solid #42A948; /* green */
+}
+
+input.ng-invalid {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 3px 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #292b2c;
+  text-align: inherit;
+  white-space: nowrap;
+  background: 0 0;
+  border: 0;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #0275d8;
+}
+
+
+.toast {
+  background-color:#fff;
+  pointer-events:auto
+}
+.toast-success {
+  background-color: rgba(71, 165, 85, 0.7)
+}
+.toast-error {
+  background-color: rgba(169, 68, 66, 0.8);
+}
+.toast-info {
+  background-color: rgba(45, 138, 165, 0.71)
+}
+.toast-warning {
+  background-color: rgba(236, 135, 25, 0.71)
+}
+.toast-progress {
+  position:absolute;
+  left:0;
+  bottom:0;
+  height:4px;
+  background-color:#000;
+  opacity:.4
+}

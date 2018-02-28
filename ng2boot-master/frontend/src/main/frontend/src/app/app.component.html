@@ -1,0 +1,27 @@
+<header class="header container-fluid">
+  <div class="row" id="header_container">
+    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12" id="content_container">
+      <p class="applicationName">
+        <a [routerLink]="['/home', currentUser.userId]" routerLinkActive="active">Online TODO List</a>
+      </p>
+    </div>
+
+    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12" id="login_container">
+      <div class="row" *ngIf="isAnonymous === false">
+        <div class="btn-group">
+          <a class="btn btn-default" routerLink="/login" routerLinkActive="active"
+             (click)="logout()">LOGOUT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<body>
+<router-outlet></router-outlet>
+</body>
+<footer class="footer container-fluid">
+  <div class="row">
+    Copyright <span class="glyphicon glyphicon-copyright-mark"></span> 2018 Shubham Paul All Rights
+    Reserved.
+  </div>
+</footer>

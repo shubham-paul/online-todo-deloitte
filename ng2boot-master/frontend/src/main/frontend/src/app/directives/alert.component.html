@@ -1,0 +1,7 @@
+<span *ngIf="!hideAlert">
+<ngb-alert [type]="alertType"
+           [dismissible]="isDismissible"
+           (close)="closeAlert()">
+            {{message}}
+</ngb-alert>
+</span>

@@ -1,0 +1,13 @@
+.thead-inverse {
+  color: #999;
+  background-color: white;
+}
+
+.thead-inverse th:hover {
+  color: #d6002a;
+  cursor: pointer;
+}
+
+.editButton {
+  cursor: pointer;
+}

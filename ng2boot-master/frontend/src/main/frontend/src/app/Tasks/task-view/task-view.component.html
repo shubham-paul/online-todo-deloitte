@@ -1,0 +1,11 @@
+<div class="container container-fluid">
+  <xfd-table [columns]="taskViewGridCols" [totalRows]="taskProjection"
+               (navigateNew)="navigateToCreate()" (navigateEdit)="navigateToEdit($event)"
+             (deleteRow)="deleteTask($event)"
+             (completeRow)="completeTask($event)"
+             [enableAddNavigation]="true"
+             [enableEditNavigation]="true"
+             [enableFilter]="true"
+             [enableDelete]="true"
+  ></xfd-table>
+</div>

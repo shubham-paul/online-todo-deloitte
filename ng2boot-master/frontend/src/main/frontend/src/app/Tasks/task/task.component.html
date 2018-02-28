@@ -1,0 +1,39 @@
+<div class="container container-fluid">
+  <form [formGroup]="taskForm" *ngIf="showForm" (ngSubmit)="onSubmit()" novalidate>
+    <fieldset>
+      <div formGroupName="task">
+        <div class="col-lg-12 col-md-12 col-sm-12 input-container">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <label>Task Name</label>
+            <textarea class="col-xs-3 col-md-3 col-lg-3 form-control" rows="5"
+                      placeholder="Task Name"
+                      formControlName="taskName"></textarea>
+            <div class="help-block">
+              <small class="error" *ngIf="taskForm.get('task.taskName').touched &&
+              taskForm.get('task.taskName').hasError('required')">
+                Task Name is required.
+              </small>
+              <small class="error" *ngIf="taskForm.get('task.taskName').touched &&
+              taskForm.get('task.taskName').hasError('maxlength')">
+                Task Name exceeded the Maximum Length Allowed.
+              </small>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <label>Description</label>
+            <textarea class="col-xs-3 col-md-3 col-lg-3 form-control" rows="5"
+                      placeholder="Description"
+                      formControlName="Description"></textarea>
+            <div class="help-block">
+              <small class="error" *ngIf="taskForm.get('task.Description').touched &&
+              taskForm.get('task.Description').hasError('maxlength')">
+                Description exceeded the Maximum Length Allowed.
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success" [disabled]="!taskForm.valid">SAVE</button>
+    </fieldset>
+  </form>
+</div>

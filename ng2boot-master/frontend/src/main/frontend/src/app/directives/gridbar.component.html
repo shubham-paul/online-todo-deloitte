@@ -1,0 +1,15 @@
+<div class="container container-fluid" component>
+  <div class="form-group">
+    <label>Filter </label>
+    <input type="text" id="inputName" [(ngModel)]="searchText"/>
+    <button type="button" class="btn btn-default btn-sm" (click)="applyFilter()">
+      <span class="glyphicon glyphicon-ok"></span>
+    </button>
+    <button type="button" class="btn btn-default btn-sm" (click)="clearFilter()">
+      <span class="glyphicon glyphicon-remove"></span>
+    </button>
+    <a class="btn btn-default btn-sm pull-right" (click)="navigateToCreate()">
+      <span class="glyphicon glyphicon-plus-sign"></span>
+    </a>
+  </div>
+</div>

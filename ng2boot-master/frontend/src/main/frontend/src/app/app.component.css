@@ -1,0 +1,113 @@
+.header {
+  height: 100px;
+  width: 100%;
+  background-color: #ffffff;
+  top: 0;
+  font-family: Geogrotesque-Regular, sans-serif;
+  padding-bottom: 9%;
+  padding-top: 2%;
+}
+
+.ng-valid[required], .ng-valid.required {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.header .modal-dialog {
+  width: 400px;
+  top: 200px;
+}
+
+.header #header_container .btn-default {
+  font-family: Geogrotesque-Regular, sans-serif;
+  border-color: transparent;
+  font-size: 16px;
+}
+
+.header #header_container .btn-default:hover {
+  background-color: transparent;
+  color: #d6002a;
+  font-family: Geogrotesque-Regular, sans-serif;
+  font-size: 16px;
+}
+
+.header #header_container #logo_container {
+  display: inline-block;
+  margin-top: 2px;
+  padding-left: 10px;
+
+}
+
+.header #header_container #logo_container .logo_img {
+  height: 38px;
+  width: 137px;
+}
+
+.header #content_container .applicationName {
+  color: #404041;
+  font-size: 26px;
+  text-transform: uppercase;
+  font-family: Geogrotesque-Regular, sans-serif;
+}
+
+.header #content_container .applicationName a:hover {
+  color: #d6002a;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header .header_container .login_container {
+  padding-top: 10px;
+}
+
+.header .header_container .login_container .logout {
+  text-decoration: none;
+}
+
+.header .header_container .login_container .logout:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.header .header_container .login_container .logout:hover {
+  text-decoration: none;
+  color: #d6002a;
+}
+
+.header .header_container .login_container #userGroup {
+
+}
+
+.header .header_container .login_container #userGroup:hover {
+  color: black;
+}
+
+.footer {
+  padding-top: 10px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: Geogrotesque-Regular, sans-serif;
+}
+
+.links {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.links:active, .links:visited {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+body {
+  font-family: Geogrotesque-Regular, sans-serif;
+}
+
+
